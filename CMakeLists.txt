@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.27)
+project(dppbot)
+add_executable(dppbot src/main.cpp)
+target_include_directories(dppbot PRIVATE ${CMAKE_SOURCE_DIR}/lib/libdpp-10.0.30-linux-x64/include)
+target_link_directories(dppbot PRIVATE ${CMAKE_SOURCE_DIR}/lib/libdpp-10.0.30-linux-x64/lib)
+target_link_libraries(dppbot dpp)
